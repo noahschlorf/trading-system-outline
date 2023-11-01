@@ -1,7 +1,3 @@
-Certainly! Here's a well-formatted README for the "trading-system-outline" repository:
-
----
-
 # Trading System Outline
 
 A comprehensive trading system project designed to fetch historical data, process buy/sell orders, and display trading statistics.
