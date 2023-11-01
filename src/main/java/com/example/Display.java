@@ -89,7 +89,7 @@ public class Display {
                 {"Winning trade count:\t", stats.win},
                 {"Lossing trade count:\t", stats.loss},
                 {"Profit/Loss:\t", stats.profitLoss},
-                {"Win rate:\t", Math.round((double) (stats.win) / (stats.loss) * 100.0) / 100.0},
+                {"Win rate:\t", Math.round((double) (stats.win) / (stats.loss+stats.win) * 100.0) / 100.0},
                 {"Number of Buys:\t", stats.buyCount},
                 {"Number of Sells:\t", stats.sellCount},
                 {"Total trades:\t", stats.sellCount+stats.buyCount},

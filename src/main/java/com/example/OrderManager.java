@@ -59,6 +59,7 @@ class OrderManager {
             System.out.println(ATR+"\n");
             float currentPrice = closePriceIndicator.getValue(i).floatValue();
             if(!liveBuy && !liveSell){
+                // update the buyOrder to inlcude your indicators
                 if(Calculate.buyOrder(series, i, ATR)){
                     entryPrice = currentPrice;
                     profitPrice = Calculate.buyOrderProfit(series, i, ATR);
@@ -67,6 +68,7 @@ class OrderManager {
                     entryDate = series.getBar(i).getEndTime().toString();
                     direction = "Long";
                     liveBuy = true;
+                // update the sellOrder to include your indicators
                 }else if(Calculate.sellOrder(series, i, ATR)){
                     entryPrice = currentPrice;
                     stopPrice = Calculate.sellOrderStop(series, i, ATR);

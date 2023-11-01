@@ -23,8 +23,9 @@ public class Main {
         int portionSize = totalBars / testCount;
         ClosePriceIndicator closePriceIndicator = new ClosePriceIndicator(series);
         // used for position sizing
+        // Add your indicators for the strategy here
         ATRIndicator ATR = new ATRIndicator(series, 14);
-        
+        // Also update ordermanager
         OrderManager orderManager = new OrderManager(series, closePriceIndicator,accountSize, ATR);
 
         Statistics stats = orderManager.processOrders(0,portionSize);

@@ -49,6 +49,7 @@ public class Calculate {
         return false;
     }
 
+    // Automatically calculates stop loss and profit, can remove if want
     public static float buyOrderStop(BarSeries series, int i, ATRIndicator aTRs) {
         OpenPriceIndicator openPriceIndicator = new OpenPriceIndicator(series);
         float openPrice = openPriceIndicator.getValue(i+1).floatValue();
